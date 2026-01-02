@@ -45,28 +45,7 @@ export default function Hero() {
             >
               Strategic design and high-performance engineering for brands that demand perfection. I transform complex visions into seamless, conversion-driven web experiences.
             </motion.p>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
-              className="flex gap-8 items-center"
-            >
-              <button 
-                className="group flex items-center gap-4 text-sm font-bold tracking-widest uppercase hover:text-gray-400 transition-colors"
-                onClick={() => scrollTo("work")}
-              >
-                Explore Works <div className="h-[1px] w-12 bg-black group-hover:w-16 group-hover:bg-gray-400 transition-all" />
-              </button>
-            </motion.div>
           </div>
-        </div>
-      </div>
-      
-      <div className="absolute bottom-12 left-6 hidden md:block">
-        <div className="flex flex-col gap-4">
-          <div className="w-[1px] h-24 bg-gray-200" />
-          <span className="text-[10px] font-bold tracking-widest uppercase text-gray-300 vertical-rl">Scroll to explore</span>
         </div>
       </div>
     </section>
