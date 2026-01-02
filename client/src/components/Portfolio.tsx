@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import marichinImg from "@assets/generated_images/marichin_group_corporate_website_luxury_preview.png";
 import healImg from "@assets/generated_images/healholistic_wellness_brand_website_luxury_preview.png";
 import chronoImg from "@assets/generated_images/chronosync_ai_productivity_platform_luxury_preview.png";
+import bitbonImg from "@assets/generated_images/bitbon_minimalist_bitcoin_tracker_widget_preview.png";
 
 const projects = [
   {
@@ -32,6 +33,19 @@ const projects = [
       "Seamless domain and ecosystem management"
     ],
     tags: ["Wellness", "Design", "E-commerce"]
+  },
+  {
+    title: "BitBon",
+    subtitle: "Open-Source Bitcoin Tracker Ecosystem",
+    role: "Founder & Lead Developer",
+    link: "https://github.com/NOL10",
+    image: bitbonImg,
+    description: [
+      "Built a real-time cryptocurrency tracker with customizable alerts and minimalist UI",
+      "Defined core feature set: live price monitoring and one-click installer",
+      "Published as an open-source tool with structured documentation and roadmap"
+    ],
+    tags: ["Open Source", "Crypto", "Utility"]
   },
   {
     title: "ChronoSync",
@@ -104,7 +118,7 @@ export default function Portfolio() {
                 {project.link ? (
                   <Button asChild variant="link" className="px-0 text-black hover:no-underline group">
                     <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                      <span className="border-b border-black pb-0.5 group-hover:border-transparent transition-all">View Case Study</span>
+                      <span className="border-b border-black pb-0.5 group-hover:border-transparent transition-all">View Project</span>
                       <ExternalLink className="h-4 w-4" />
                     </a>
                   </Button>
