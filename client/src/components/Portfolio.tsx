@@ -10,121 +10,86 @@ import bitbonImg from "@assets/generated_images/bitbon_minimalist_bitcoin_tracke
 const projects = [
   {
     title: "Marichin Group",
-    subtitle: "Corporate Digital Identity",
-    role: "Full Product & Web Developer",
-    link: "https://marichin.group/",
+    subtitle: "Enterprise Identity",
     image: marichinImg,
-    description: [
-      "Strategic requirement gathering and full-cycle development",
-      "High-performance SEO and speed optimization",
-      "Sophisticated corporate presence for global outreach"
-    ],
-    tags: ["Strategy", "SEO", "Enterprise"]
+    link: "https://marichin.group/",
+    tags: ["Product", "Strategy"]
   },
   {
     title: "HealHolistic",
-    subtitle: "Wellness Brand Experience",
-    role: "Lead Designer & Developer",
-    link: "https://healholistic.in/",
+    subtitle: "Brand Experience",
     image: healImg,
-    description: [
-      "Serene, brand-aligned responsive interface",
-      "End-to-end architecture from design to deployment",
-      "Seamless domain and ecosystem management"
-    ],
-    tags: ["Wellness", "Design", "E-commerce"]
+    link: "https://healholistic.in/",
+    tags: ["Design", "E-com"]
   },
   {
     title: "BitBon",
-    subtitle: "Open-Source Bitcoin Tracker Ecosystem",
-    role: "Founder & Lead Developer",
-    link: "https://github.com/NOL10",
+    subtitle: "Open Source Utility",
     image: bitbonImg,
-    description: [
-      "Built a real-time cryptocurrency tracker with customizable alerts and minimalist UI",
-      "Defined core feature set: live price monitoring and one-click installer",
-      "Published as an open-source tool with structured documentation and roadmap"
-    ],
-    tags: ["Open Source", "Crypto", "Utility"]
-  },
-  {
-    title: "ChronoSync",
-    subtitle: "AI-Driven Productivity Ecosystem",
-    role: "Product Owner & ML Engineer",
-    link: null,
-    image: chronoImg,
-    description: [
-      "Architected complex user flows and system intelligence",
-      "Engineered FastAPI backend with real-time analytics",
-      "Built a production-ready AI-first MVP"
-    ],
-    tags: ["AI", "Architecture", "Fintech"]
+    link: "https://github.com/NOL10",
+    tags: ["Engineering", "Fintech"]
   }
 ];
 
 export default function Portfolio() {
   return (
-    <section id="work" className="py-32 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="max-w-xl mb-24">
-          <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-400 mb-4 block">Selected Works</span>
-          <h2 className="text-4xl md:text-5xl font-serif text-gray-900 leading-tight italic">Crafting digital excellence through precision engineering.</h2>
+    <section id="work" className="py-40 bg-white noise-overlay">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-32 gap-8">
+          <div className="max-w-xl">
+            <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-gray-400 mb-6 block">Portfolio</span>
+            <h2 className="text-5xl md:text-7xl font-serif text-black leading-[0.9]">
+              Selected <br/><span className="italic font-normal text-gray-300">Case Studies.</span>
+            </h2>
+          </div>
+          <div className="text-right">
+            <p className="text-xs font-bold tracking-widest text-gray-300 uppercase mb-2">01 — 03</p>
+            <div className="w-24 h-[1px] bg-gray-100 ml-auto" />
+          </div>
         </div>
 
-        <div className="grid gap-32">
+        <div className="space-y-64">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-              className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 md:gap-24 items-center`}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 1.2, ease: [0.19, 1, 0.22, 1] }}
+              className="group relative"
             >
-              <div className="w-full md:w-3/5 group overflow-hidden bg-gray-50 border border-gray-100">
-                <motion.div 
+              <div className="relative aspect-[16/9] overflow-hidden bg-gray-50 border border-gray-50">
+                <motion.img 
                   whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
-                  className="aspect-video w-full overflow-hidden"
-                >
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700"
-                  />
-                </motion.div>
+                  transition={{ duration: 1.5, ease: [0.19, 1, 0.22, 1] }}
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                />
+                
+                {/* Overlay details on image */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               </div>
 
-              <div className="w-full md:w-2/5">
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map(tag => (
-                    <span key={tag} className="text-[10px] font-medium tracking-widest uppercase border-b border-gray-200 pb-1 text-gray-400">
-                      {tag}
-                    </span>
-                  ))}
+              <div className="mt-12 flex flex-col md:flex-row justify-between items-start gap-8">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    {project.tags.map(tag => (
+                      <span key={tag} className="text-[9px] font-bold tracking-[0.3em] uppercase text-gray-400 px-3 py-1 border border-gray-100">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 className="text-4xl md:text-5xl font-serif font-medium mb-2 group-hover:italic transition-all duration-700">{project.title}</h3>
+                  <p className="text-gray-500 font-light italic">{project.subtitle}</p>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-serif font-medium mb-2">{project.title}</h3>
-                <p className="text-lg text-gray-500 mb-8 font-light italic">{project.subtitle}</p>
                 
-                <div className="space-y-4 mb-10">
-                  {project.description.map((item, i) => (
-                    <div key={i} className="flex items-start text-gray-600 text-sm leading-relaxed">
-                      <span className="mr-4 mt-1.5 h-[1px] w-4 bg-gray-300 shrink-0" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {project.link ? (
-                  <Button asChild variant="link" className="px-0 text-black hover:no-underline group">
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                      <span className="border-b border-black pb-0.5 group-hover:border-transparent transition-all">View Project</span>
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </Button>
-                ) : (
-                  <span className="text-[10px] font-bold tracking-widest uppercase text-gray-300">Confidential Architecture</span>
-                )}
+                <Button asChild variant="link" className="px-0 text-black hover:no-underline group/btn pt-2">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4">
+                    <span className="text-[10px] font-bold tracking-[0.4em] uppercase border-b border-black pb-1 group-hover/btn:border-transparent transition-all">Case Detail</span>
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                </Button>
               </div>
             </motion.div>
           ))}

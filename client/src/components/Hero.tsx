@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
   const scrollTo = (id: string) => {
@@ -10,62 +9,78 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="min-h-[90vh] flex items-center pt-20 relative overflow-hidden bg-white">
-      <div className="absolute top-0 right-0 w-[40%] h-full bg-gray-50/30 -z-10" />
+    <section id="hero" className="min-h-screen flex items-center pt-32 pb-20 relative overflow-hidden bg-white noise-overlay">
+      {/* Structural background element */}
+      <div className="absolute top-0 right-0 w-[45%] h-full bg-[#fcfcfc] border-l border-gray-50 -z-10" />
       
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="relative">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-12"
+            transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
+            className="mb-16 flex items-center gap-4"
           >
-            <span className="text-[10px] font-bold tracking-[0.6em] uppercase text-gray-400 border-l-[1px] border-black pl-6">Independent Design Engineer</span>
+            <div className="w-12 h-[1px] bg-black" />
+            <span className="text-[10px] font-bold tracking-[0.8em] uppercase text-gray-400">Independent Studio</span>
           </motion.div>
 
           <motion.h1 
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-7xl md:text-[140px] font-serif font-medium leading-[0.85] mb-16 text-black tracking-tighter"
+            transition={{ duration: 1.4, ease: [0.19, 1, 0.22, 1] }}
+            className="text-7xl md:text-[160px] font-serif font-medium leading-[0.82] mb-20 text-black tracking-tighter"
           >
-            Exceptional <br/>
-            <span className="italic font-normal text-gray-300">Digital</span> <br/>
-            Experiences.
+            Digital <br/>
+            <span className="italic font-normal text-gray-200">Excellence</span> <br/>
+            Redefined.
           </motion.h1>
 
-          <div className="flex flex-col md:flex-row md:items-start gap-16 md:gap-32">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="max-w-md"
+              transition={{ duration: 1.2, delay: 0.4, ease: [0.19, 1, 0.22, 1] }}
+              className="md:col-span-5"
             >
-              <p className="text-xl md:text-2xl text-gray-400 leading-relaxed font-light italic mb-8">
-                “I help brands establish authority through high-performance engineering and strategic design.”
+              <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light mb-8 max-w-sm">
+                Strategic design and high-performance engineering for global brands that demand perfection.
               </p>
-              <p className="text-sm md:text-base text-gray-500 leading-relaxed font-light">
-                Specializing in bespoke digital assets for businesses, clinics, and founders who demand perfection. From concept to deployment, I own the full delivery cycle.
-              </p>
+              <div className="flex items-center gap-6">
+                <button 
+                  onClick={() => scrollTo("work")}
+                  className="group relative flex items-center gap-4 text-[10px] font-bold tracking-[0.4em] uppercase"
+                >
+                  <span className="pb-1 border-b border-black group-hover:border-transparent transition-all duration-500">Selected Works</span>
+                </button>
+              </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              className="flex items-center"
+              transition={{ duration: 2, delay: 0.8 }}
+              className="md:col-span-7 hidden md:flex justify-end"
             >
-              <button 
-                onClick={() => scrollTo("work")}
-                className="group relative flex items-center justify-center w-32 h-32 rounded-full border border-gray-100 hover:border-black transition-all duration-700 overflow-hidden bg-white"
-              >
-                <div className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[0.16,1,0.3,1]" />
-                <ArrowDown className="h-6 w-6 relative z-10 group-hover:text-white transition-colors duration-700" />
-              </button>
+               <div className="text-[10px] font-bold tracking-[0.4em] uppercase text-gray-300 transform rotate-90 origin-right translate-y-20">
+                 Est. 2022 — Bangalore, IN
+               </div>
             </motion.div>
           </div>
         </div>
+      </div>
+
+      {/* Cinematic corner label */}
+      <div className="absolute bottom-12 left-6 lg:left-12">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+          className="flex flex-col gap-6"
+        >
+          <div className="w-[1px] h-32 bg-gray-100" />
+          <span className="text-[9px] font-bold tracking-[0.5em] uppercase text-gray-300 [writing-mode:vertical-lr]">Scroll for Case Studies</span>
+        </motion.div>
       </div>
     </section>
   );
