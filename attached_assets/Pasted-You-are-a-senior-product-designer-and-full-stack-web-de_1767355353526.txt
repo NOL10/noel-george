@@ -1,0 +1,143 @@
+You are a senior product designer and full-stack web developer.
+
+Build a production-ready, modern, high-performance personal portfolio website for a professional freelance web developer named Noel George.
+
+GOAL:
+Create a website that converts visitors into clients. The site must look premium, clean, fast, and trustworthy — not like a student portfolio.
+
+TARGET AUDIENCE:
+• Businesses
+• Clinics & wellness brands
+• Founders
+• Individuals needing professional websites
+
+TECH STACK:
+• Frontend: HTML, CSS, JavaScript (NO frameworks)
+• Styling: Modern CSS (Flexbox/Grid)
+• Animations: Subtle, professional (CSS only)
+• Performance-first, SEO-friendly
+• Fully responsive (mobile-first)
+• Clean, readable, maintainable code
+
+DESIGN DIRECTION:
+• Minimal, premium, professional
+• Neutral palette (dark + light accents)
+• Strong typography hierarchy
+• Plenty of whitespace
+• No flashy or childish effects
+• Apple / Stripe-level cleanliness
+
+PAGES / SECTIONS REQUIRED:
+
+1. HERO SECTION (Above the Fold)
+Headline:
+"I Design & Build High-Performance Websites That Look Professional and Convert"
+
+Subheadline:
+"I help businesses, clinics, founders, and individuals establish a strong online presence with fast, clean, and scalable websites — from concept to deployment."
+
+Primary CTA button:
+"View My Work"
+
+Secondary CTA button:
+"Get Your Website Built"
+
+2. ABOUT SECTION
+Short, confident introduction:
+
+"I’m Noel George — a full-stack developer with real production experience building and deploying modern websites, AI systems, and scalable backends.
+
+I don’t just design pages — I own the full delivery: requirements, UX, development, performance optimization, SEO basics, deployment, and long-term scalability."
+
+3. SERVICES SECTION
+Display as clean cards or columns:
+
+• Website Development
+  - Business websites
+  - Clinics & wellness brands
+  - Portfolios & personal brands
+  - Landing pages
+
+• UI/UX Design
+  - Clean, professional layouts
+  - Mobile-first responsive design
+  - Brand-aligned interfaces
+
+• Backend & Integrations
+  - Forms & dashboards
+  - APIs (FastAPI / Flask)
+  - Database integration
+
+• Deployment & Performance
+  - Domain & DNS setup
+  - Hosting & deployment
+  - Speed optimization & SEO basics
+
+Add a small caption:
+"No templates. No shortcuts. Built for performance and clarity."
+
+4. PORTFOLIO SECTION
+Each project must include title, role, bullet points, and live link.
+
+Projects to include:
+
+• Marichin Group – Corporate Website
+Role: Full Product & Web Developer
+- Led requirement gathering, development, and deployment
+- Implemented SEO and performance optimization
+- Delivered a clean corporate presence
+Link: https://marichin.group/
+
+• HealHolistic – Wellness Brand Website
+Role: Designer & Developer
+- Designed responsive, brand-aligned UI
+- Built and deployed complete website
+- Handled domain and DNS setup
+Link: https://healholistic.in/
+
+• ChronoSync – AI Productivity Platform
+Role: Product Owner & ML Engineer
+- Designed system architecture and user flows
+- Built FastAPI backend and real-time dashboard
+- Delivered deployment-ready MVP
+
+5. WHY WORK WITH ME SECTION
+Bullet points:
+✔ Real client projects
+✔ End-to-end ownership
+✔ Clean, maintainable code
+✔ Performance-focused builds
+✔ Clear communication
+
+6. CALL TO ACTION SECTION
+Text:
+"Have a website idea or need a professional online presence? Let’s build something solid."
+
+CTA Button:
+"Message Me"
+
+7. FOOTER
+Include:
+• Name: Noel George
+• Email: noelgeorge1012@gmail.com
+• GitHub: https://github.com/NOL10
+• LinkedIn: https://www.linkedin.com/in/noel-george-1141a3248/
+
+EXTRA REQUIREMENTS:
+• Add smooth scrolling
+• Add subtle hover effects
+• Ensure fast load time
+• SEO-friendly meta tags
+• Clean semantic HTML
+• No lorem ipsum
+• No emojis
+• No unnecessary text
+• Professional tone throughout
+
+DELIVERABLE:
+Return a complete, runnable project with:
+• index.html
+• style.css
+• script.js
+
+The output must be production-quality and client-ready.
