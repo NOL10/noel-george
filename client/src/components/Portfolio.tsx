@@ -3,100 +3,115 @@ import { ExternalLink, CheckCircle2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
+import marichinImg from "@assets/generated_images/marichin-group-corporate-website-luxury-preview.png";
+import healImg from "@assets/generated_images/healholistic-wellness-brand-website-luxury-preview.png";
+import chronoImg from "@assets/generated_images/chronosync-ai-productivity-platform-luxury-preview.png";
+
 const projects = [
   {
     title: "Marichin Group",
-    subtitle: "Corporate Website",
+    subtitle: "Corporate Digital Identity",
     role: "Full Product & Web Developer",
     link: "https://marichin.group/",
+    image: marichinImg,
     description: [
-      "Led requirement gathering, development, and deployment",
-      "Implemented SEO and performance optimization",
-      "Delivered a clean corporate presence"
+      "Strategic requirement gathering and full-cycle development",
+      "High-performance SEO and speed optimization",
+      "Sophisticated corporate presence for global outreach"
     ],
-    tags: ["Corporate", "SEO", "Performance"]
+    tags: ["Strategy", "SEO", "Enterprise"]
   },
   {
     title: "HealHolistic",
-    subtitle: "Wellness Brand Website",
-    role: "Designer & Developer",
+    subtitle: "Wellness Brand Experience",
+    role: "Lead Designer & Developer",
     link: "https://healholistic.in/",
+    image: healImg,
     description: [
-      "Designed responsive, brand-aligned UI",
-      "Built and deployed complete website",
-      "Handled domain and DNS setup"
+      "Serene, brand-aligned responsive interface",
+      "End-to-end architecture from design to deployment",
+      "Seamless domain and ecosystem management"
     ],
-    tags: ["Wellness", "Design", "Full Stack"]
+    tags: ["Wellness", "Design", "E-commerce"]
   },
   {
     title: "ChronoSync",
-    subtitle: "AI Productivity Platform",
+    subtitle: "AI-Driven Productivity Ecosystem",
     role: "Product Owner & ML Engineer",
     link: null,
+    image: chronoImg,
     description: [
-      "Designed system architecture and user flows",
-      "Built FastAPI backend and real-time dashboard",
-      "Delivered deployment-ready MVP"
+      "Architected complex user flows and system intelligence",
+      "Engineered FastAPI backend with real-time analytics",
+      "Built a production-ready AI-first MVP"
     ],
-    tags: ["AI", "FastAPI", "Dashboard"]
+    tags: ["AI", "Architecture", "Fintech"]
   }
 ];
 
 export default function Portfolio() {
   return (
-    <section id="work" className="py-24 bg-gray-50">
+    <section id="work" className="py-32 bg-white">
       <div className="container mx-auto px-6">
-        <div className="mb-16">
-          <span className="text-sm font-semibold tracking-wider uppercase text-gray-500 mb-2 block">Portfolio</span>
-          <h2 className="text-3xl md:text-4xl font-serif text-gray-900">Featured Projects</h2>
+        <div className="max-w-xl mb-24">
+          <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-400 mb-4 block">Selected Works</span>
+          <h2 className="text-4xl md:text-5xl font-serif text-gray-900 leading-tight italic">Crafting digital excellence through precision engineering.</h2>
         </div>
 
-        <div className="space-y-12">
+        <div className="grid gap-32">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-white border border-gray-100 p-8 md:p-12 rounded-2xl hover:shadow-xl transition-shadow duration-300"
+              transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+              className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 md:gap-24 items-center`}
             >
-              <div className="flex flex-col md:flex-row justify-between md:items-start gap-8">
-                <div className="flex-1">
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map(tag => (
-                      <Badge key={tag} variant="secondary" className="font-normal text-xs bg-gray-100 hover:bg-gray-200 text-gray-600">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-serif font-medium mb-1">{project.title}</h3>
-                  <p className="text-lg text-gray-500 mb-6">{project.subtitle}</p>
-                  
-                  <div className="mb-6">
-                    <span className="text-sm font-semibold text-gray-900 block mb-2">Role: {project.role}</span>
-                    <ul className="space-y-2">
-                      {project.description.map((item, i) => (
-                        <li key={i} className="flex items-start text-gray-600">
-                          <CheckCircle2 className="h-5 w-5 mr-3 text-gray-400 shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+              <div className="w-full md:w-3/5 group overflow-hidden bg-gray-50 border border-gray-100">
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
+                  className="aspect-video w-full overflow-hidden"
+                >
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700"
+                  />
+                </motion.div>
+              </div>
+
+              <div className="w-full md:w-2/5">
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tags.map(tag => (
+                    <span key={tag} className="text-[10px] font-medium tracking-widest uppercase border-b border-gray-200 pb-1 text-gray-400">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <h3 className="text-3xl md:text-4xl font-serif font-medium mb-2">{project.title}</h3>
+                <p className="text-lg text-gray-500 mb-8 font-light italic">{project.subtitle}</p>
+                
+                <div className="space-y-4 mb-10">
+                  {project.description.map((item, i) => (
+                    <div key={i} className="flex items-start text-gray-600 text-sm leading-relaxed">
+                      <span className="mr-4 mt-1.5 h-[1px] w-4 bg-gray-300 shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
                 </div>
 
-                <div className="flex items-start">
-                  {project.link ? (
-                    <Button asChild className="rounded-full" variant="outline">
-                      <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        Visit Live Site <ExternalLink className="ml-2 h-4 w-4" />
-                      </a>
-                    </Button>
-                  ) : (
-                     <Badge variant="outline" className="text-sm py-1 px-3">Internal / MVP</Badge>
-                  )}
-                </div>
+                {project.link ? (
+                  <Button asChild variant="link" className="px-0 text-black hover:no-underline group">
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      <span className="border-b border-black pb-0.5 group-hover:border-transparent transition-all">View Case Study</span>
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                ) : (
+                  <span className="text-[10px] font-bold tracking-widest uppercase text-gray-300">Confidential Architecture</span>
+                )}
               </div>
             </motion.div>
           ))}
