@@ -2,15 +2,7 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-// Using live URLs for images where available
-const marichinImg = "https://marichin.group/wp-content/uploads/2023/11/logo-white.png"; // Placeholder for actual live screenshot if needed, but using URLs is safer for 'live' feel
-// However, since I need to show a 'live website image', I'll use a reliable screenshot service or proxy if allowed, 
-// but usually, it's better to use the generated ones as placeholders if live ones are not accessible via simple URL.
-// I will try to use the actual site as a background or use a screenshot.
-// Since I can't easily 'screenshot' a live site, I'll update the component to use the live URLs if they were provided, 
-// but since they weren't, I'll keep the generated ones but label them as 'Live Preview'.
-// Actually, I can use a screenshot API URL if I want to be fancy.
-
+import marichinImg from "@assets/generated_images/marichin_group_corporate_website_luxury_preview.png";
 import healImg from "@assets/generated_images/healholistic_wellness_brand_website_luxury_preview.png";
 import chronoImg from "@assets/generated_images/chronosync_ai_productivity_platform_luxury_preview.png";
 import bitbonImg from "@assets/generated_images/bitbon_minimalist_bitcoin_tracker_widget_preview.png";
@@ -21,8 +13,7 @@ const projects = [
     subtitle: "Corporate Digital Identity",
     role: "Full Product & Web Developer",
     link: "https://marichin.group/",
-    // Using a screenshot service for real live feel
-    image: "https://api.screenshotmachine.com/?key=ca828e&url=https://marichin.group/&dimension=1920x1080",
+    image: marichinImg,
     description: [
       "Strategic requirement gathering and full-cycle development",
       "High-performance SEO and speed optimization",
@@ -35,7 +26,7 @@ const projects = [
     subtitle: "Wellness Brand Experience",
     role: "Lead Designer & Developer",
     link: "https://healholistic.in/",
-    image: "https://api.screenshotmachine.com/?key=ca828e&url=https://healholistic.in/&dimension=1920x1080",
+    image: healImg,
     description: [
       "Serene, brand-aligned responsive interface",
       "End-to-end architecture from design to deployment",
@@ -94,23 +85,13 @@ export default function Portfolio() {
                 <motion.div 
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] }}
-                  className="aspect-video w-full overflow-hidden relative"
+                  className="aspect-video w-full overflow-hidden"
                 >
                   <img 
                     src={project.image} 
                     alt={project.title} 
                     className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700"
-                    onError={(e) => {
-                       // Fallback to generated image if live screenshot fails
-                       const target = e.target as HTMLImageElement;
-                       if (project.title === "Marichin Group") target.src = "https://marichin.group/wp-content/uploads/2023/11/logo-white.png";
-                    }}
                   />
-                  {project.link && (
-                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div className="bg-black/80 backdrop-blur-sm text-white text-[8px] font-bold tracking-[0.2em] px-3 py-1 uppercase">Live View</div>
-                    </div>
-                  )}
                 </motion.div>
               </div>
 
