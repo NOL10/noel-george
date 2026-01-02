@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import { ExternalLink, CheckCircle2 } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-import marichinImg from "@assets/generated_images/marichin-group-corporate-website-luxury-preview.png";
-import healImg from "@assets/generated_images/healholistic-wellness-brand-website-luxury-preview.png";
-import chronoImg from "@assets/generated_images/chronosync-ai-productivity-platform-luxury-preview.png";
+import marichinImg from "@assets/generated_images/marichin_group_corporate_website_luxury_preview.png";
+import healImg from "@assets/generated_images/healholistic_wellness_brand_website_luxury_preview.png";
+import chronoImg from "@assets/generated_images/chronosync_ai_productivity_platform_luxury_preview.png";
 
 const projects = [
   {
