@@ -1,6 +1,11 @@
 import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
-import { rm, readFile } from "fs/promises";
+import { rm, readFile, copyFile, mkdir } from "fs/promises";
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // server deps to bundle to reduce openat(2) syscalls
 // which helps cold start times
@@ -37,6 +42,10 @@ async function buildAll() {
 
   console.log("building client...");
   await viteBuild();
+
+  // Ensure _redirects file is copied to dist/public
+  await mkdir("dist/public", { recursive: true });
+  await copyFile("public/_redirects", "dist/public/_redirects");
 
   console.log("building server...");
   const pkg = JSON.parse(await readFile("package.json", "utf-8"));
