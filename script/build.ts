@@ -43,9 +43,12 @@ async function buildAll() {
   console.log("building client...");
   await viteBuild();
 
-  // Ensure _redirects file is copied to dist/public
+  // Ensure _redirects file is copied to dist/public (for Netlify)
   await mkdir("dist/public", { recursive: true });
   await copyFile("public/_redirects", "dist/public/_redirects");
+  
+  // Also copy to dist root for Netlify
+  await copyFile("public/_redirects", "dist/_redirects");
 
   console.log("building server...");
   const pkg = JSON.parse(await readFile("package.json", "utf-8"));
