@@ -1,4 +1,3 @@
-
 [build]
-command = "npm install -g tsx && npm install && npm install esbuild && npm run build"
-publish = "dist"
+  command = "npm install -g tsx && npm install --include=dev && npm run build"
+  publish = "dist"
