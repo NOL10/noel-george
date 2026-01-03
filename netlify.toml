@@ -1,5 +1,5 @@
 [build]
-  command = "npm install -g tsx && npm install --include=dev && npm run build"
+  command = "npm install && npm run build"
   publish = "dist/public"
 
 # Handle client-side routing
@@ -8,9 +8,9 @@
   to = "/index.html"
   status = 200
 
-# Include any environment variables here if needed
+# Set Node.js version
 [build.environment]
-  NODE_VERSION = "18.0.0"
+  NODE_VERSION = "20.11.0"  # Using the latest LTS version
 
 [[redirects]]
   from = "/*"
