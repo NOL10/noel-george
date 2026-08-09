@@ -66,6 +66,32 @@ const projects = [
       "Built a production-ready AI-first MVP"
     ],
     tags: ["AI", "Architecture", "Fintech"]
+  },
+  {
+    title: "Flowternity Academy",
+    subtitle: "Learning Platform",
+    role: "Developer",
+    link: "https://academy.flowternity.com/",
+    image: chronoImg,
+    description: [
+      "Developed educational platform for skill development",
+      "Interactive learning experience with modern UI",
+      "Scalable architecture for growing course content"
+    ],
+    tags: ["Education", "Web Development", "Platform"]
+  },
+  {
+    title: "Berryn Curry",
+    subtitle: "Personal Portfolio",
+    role: "Developer",
+    link: "https://berryncurry.vercel.app/",
+    image: healImg,
+    description: [
+      "Created personal portfolio with modern design",
+      "Responsive layout with smooth animations",
+      "Showcase of projects and skills"
+    ],
+    tags: ["Portfolio", "Design", "Web Development"]
   }
 ];
 
