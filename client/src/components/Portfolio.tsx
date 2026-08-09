@@ -73,7 +73,7 @@ const projects = [
   },
   {
     title: "Flowternity Academy",
-    subtitle: "Learning Platform",
+    subtitle: "sports Academy Platform",
     role: "Developer",
     link: "https://academy.flowternity.com/",
     image: flowternityImg,
@@ -86,7 +86,7 @@ const projects = [
   },
   {
     title: "Berryn Curry",
-    subtitle: "Personal Portfolio",
+    subtitle: "Online fruits and bakery store",
     role: "Developer",
     link: "https://berryncurry.vercel.app/",
     image: berrynCurryImg,
