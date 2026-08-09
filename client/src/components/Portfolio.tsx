@@ -13,6 +13,10 @@ import healImg from "@assets/generated_images/healholistic_wellness_brand_websit
 import chronoImg from "@assets/generated_images/chronosync_ai_productivity_platform_luxury_preview.png";
 import bitbonImg from "@assets/generated_images/bitbon_minimalist_bitcoin_tracker_widget_preview.png";
 
+const spellBoundImg = "/images/projects/spell bound.png";
+const berrynCurryImg = "/images/projects/berryncurry.png";
+const flowternityImg = "/images/projects/flowternity academy.png";
+
 const projects = [
   {
     title: "Marichin Group",
@@ -72,7 +76,7 @@ const projects = [
     subtitle: "Learning Platform",
     role: "Developer",
     link: "https://academy.flowternity.com/",
-    image: chronoImg,
+    image: flowternityImg,
     description: [
       "Developed educational platform for skill development",
       "Interactive learning experience with modern UI",
@@ -85,13 +89,26 @@ const projects = [
     subtitle: "Personal Portfolio",
     role: "Developer",
     link: "https://berryncurry.vercel.app/",
-    image: healImg,
+    image: berrynCurryImg,
     description: [
       "Created personal portfolio with modern design",
       "Responsive layout with smooth animations",
       "Showcase of projects and skills"
     ],
     tags: ["Portfolio", "Design", "Web Development"]
+  },
+  {
+    title: "Spell Bound",
+    subtitle: "Interactive Experience",
+    role: "Developer",
+    link: "https://spellbound-gamma.vercel.app",
+    image: spellBoundImg,
+    description: [
+      "Created immersive interactive web experience",
+      "Modern design with engaging user interactions",
+      "Responsive and performant implementation"
+    ],
+    tags: ["Interactive", "Design", "Web Development"]
   }
 ];
 
