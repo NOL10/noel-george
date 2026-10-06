@@ -15,9 +15,22 @@ import bitbonImg from "@assets/generated_images/bitbon_minimalist_bitcoin_tracke
 
 const spellBoundImg = "/images/projects/spell bound.png";
 const berrynCurryImg = "/images/projects/berryncurry.png";
-const flowternityImg = "/images/projects/flowternity academy.png";
+const flowternityImg = "/images/projects/academy flowternity .png";
 
 const projects = [
+  {
+    title: "Flowternity Academy",
+    subtitle: "Sports Academy Management & Membership Platform",
+    role: "Full Stack Developer",
+    link: "https://academy.flowternity.com/",
+    image: flowternityImg,
+    description: [
+      "Designed and developed a full-stack sports academy platform that enables users to explore sports programs, book free trial classes, purchase memberships, manage subscriptions, pause memberships, and book training sessions",
+      "Integrated admin system for managing users, memberships, classes, coaches, bookings, attendance, and payments",
+      "Comprehensive membership management with subscription handling and payment processing"
+    ],
+    tags: ["Sports", "Full Stack", "Membership"]
+  },
   {
     title: "Marichin Group",
     subtitle: "Corporate Digital Identity",
@@ -70,19 +83,6 @@ const projects = [
       "Built a production-ready AI-first MVP"
     ],
     tags: ["AI", "Architecture", "Fintech"]
-  },
-  {
-    title: "Flowternity Academy",
-    subtitle: "sports Academy Platform",
-    role: "Developer",
-    link: "https://academy.flowternity.com/",
-    image: flowternityImg,
-    description: [
-      "Developed educational platform for skill development",
-      "Interactive learning experience with modern UI",
-      "Scalable architecture for growing course content"
-    ],
-    tags: ["Education", "Web Development", "Platform"]
   },
   {
     title: "Berryn Curry",
